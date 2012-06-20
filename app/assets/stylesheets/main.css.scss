@@ -35,6 +35,18 @@ nav {
 	background: #eee;
 	padding: 10px 0;
 	margin: 0 0 40px 0;
+	ul {
+		float: right;
+		li {
+			float: left;
+			margin-left: 20px;
+			a {
+				text-decoration: none;
+				color: #333;
+				line-height: 31px;
+			}
+		}
+	}
 }
 
 form {
@@ -85,6 +97,19 @@ form {
 	margin-bottom: 10px;
 }
 
+#error_explanation {
+	li {
+		color: #fff;
+		background: red;
+		display: block;
+		line-height: 30px;
+		width: 100%;
+		padding: 0 5px;
+		@include border-radius(3px);
+		margin-bottom: 10px;
+	}
+}
+
 .values {
 	width: 360px;
 	float: left;
@@ -92,4 +117,19 @@ form {
 	p {
 		margin-bottom: 20px;
 	}
+}
+
+table {
+	width: 900px;
+	font-size: 14px;
+	color: #444;
+	tr {
+		td {
+			padding: 5px 10px;
+		}
+	}
+}
+
+table, th, td {
+	border: 1px solid #bbb;
 }

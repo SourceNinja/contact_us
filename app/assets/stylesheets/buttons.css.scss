@@ -1,0 +1,70 @@
+@mixin button($background-1, $background-2, $text-color, $shadow-color, $border) {
+  display: inline-block;
+  background-color: $background-1; // Old browsers
+  @include filter-gradient($background-1, $background-2, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  $background-1 0%, $background-2 100%));
+  text-decoration: none;
+  text-shadow: 1px 1px $shadow-color;
+  color: $text-color !important;
+  padding:5px 10px;
+  border: 1px solid $border;
+  min-width: 86px;
+  text-align:center;
+  @include border-radius(3px); 
+  &:hover {
+    background-color: $background-2; // Old browsers
+    @include filter-gradient($background-2, $background-1, vertical); // IE6-9
+    @include background-image(linear-gradient(top,  $background-2 0%, $background-1 100%));
+  };
+}
+
+/* grey buttons .btn is preferred class */
+.btn, .grey-btn, .small_button, .menu-button, .red-btn {
+  @include button(#ffffff, #dddddd, #777777, #FFFFFF, #999999);
+}
+
+/* blue buttons -- .blue_btn is the preferred class */
+.blue_btn, .blue_button, .blue_long_button, .blue_wide_button {
+  @include button(#4fa8bf, #0181a2, #ffffff, rgba(20, 92, 125, 0.65), #0f5878);
+}
+
+/* green buttons -- .green_btn is preferred class */
+.green_btn, .green_button, .green_button_up_to_date {
+  @include button(#b2db5e, #85c701, #ffffff, #65a300, #65a300);
+}
+
+.giant_btn{
+	@extend .btn;
+	font-size:34px;
+	padding:40px;
+	border-radius: 10px;
+	margin-top:20px;
+  display:inline-block;
+}
+
+/* special buttons */
+.grey-red-btn {
+  color: $red;
+  display: block;
+  text-decoration: none;
+}
+.grey-green-btn {
+  color: $green;
+  display: block;
+  text-decoration: none;
+}
+
+.disabled_btn {
+  @include button(#ffffff, #ffffff, #bbbbbb, #FFFFFF, #cccccc);
+}
+
+.secondary_btn {
+  @include button(#ffffff, #dddddd, #999999, #FFFFFF, #bbbbbb);
+  /*@include button(#ffffff, #ffffff, #bbbbbb, #FFFFFF, #cccccc);*/
+}
+
+.tiny_btn {
+  @extend .btn;
+  font-size: 10px;
+  padding: 2px 4px;
+}

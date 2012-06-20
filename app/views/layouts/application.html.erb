@@ -12,6 +12,19 @@
 	<nav>
 		<div class="container">
 			<%= image_tag "/logo.png", :id => "logo" %>
+			<% if admin_signed_in? %>
+				<ul>
+					<li>
+						<%= link_to 'Contacts', contacts_path %>
+					</li>
+					<li>
+						<%= link_to 'New Contact', new_contact_path %>
+					</li>
+					<li>
+						<%= link_to "Log out", destroy_admin_session_path, method: :delete %>
+					</li>
+				</ul>
+			<% end %>
 		</div>
 	</nav>
 
