@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_filter :authenticate_admin!, except: [:new]
+  before_filter :authenticate_admin!, except: [:new, :create]
 
   # GET /contacts
   # GET /contacts.json
@@ -40,8 +40,12 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
 
     respond_to do |format|
-      if @contact.save
+      success = @contact.save
+      if success and admin_signed_in?
         format.html { redirect_to contacts_url, notice: 'Contact was successfully created.' }
+        format.json { render json: @contact, status: :created, location: @contact }
+      elsif success
+        format.html { redirect_to '/thank_you.html' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "new" }

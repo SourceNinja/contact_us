@@ -12,6 +12,7 @@ describe "Contacts pages" do
     it "is not allowed for anonymous user" do
       get contacts_path
       response.status.should be(302)
+      response.should redirect_to(new_admin_session_path)
     end
   end
 
