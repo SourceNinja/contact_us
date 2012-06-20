@@ -4,10 +4,12 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'devise', '~> 1.4.7'
 gem 'jquery-rails'
 gem 'rails', '3.2.3'
-gem 'sqlite3'
+gem 'pg'
+
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
+  gem 'sqlite3'
 end
 
 group :assets do
