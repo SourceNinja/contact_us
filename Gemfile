@@ -10,6 +10,7 @@ gem 'pg'
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
   gem 'sqlite3'
+  gem 'webrat'
 end
 
 group :assets do
