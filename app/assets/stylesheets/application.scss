@@ -1,0 +1,11 @@
+/*
+ * application.scss
+ *
+ * Important! Do *not* use Sprockets "require" syntax.
+ * Use @import to include other stylesheets and Compass mixins.
+ */
+
+@import "reset";
+@import "compass/css3";
+
+@import "main";

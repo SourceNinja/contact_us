@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>App</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Contact SourceNinja</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
+
 <body>
 
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+	<nav>
+		<div class="container">
+			<%= image_tag "/logo.png", :id => "logo" %>
+		</div>
+	</nav>
 
-<%= yield %>
+	<div class="container">
+
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+
+		<%= yield %>
+	</div>
 
 </body>
 </html>

@@ -1,0 +1,70 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
+}
+
+nav {
+	background: #eee;
+	padding: 10px 0;
+	margin: 0 0 40px 0;
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+}
+
+h2 {
+	font-size: 32px;
+	color: #00aad2;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #999;
+}
+
+.alert {
+	color: #fff;
+	background: red;
+	display: block;
+	line-height: 30px;
+	width: 100%;
+	padding: 0 5px;
+	@include border-radius(3px);
+	margin-bottom: 10px;
+}
+
+form {
+	margin: 20px auto 0 auto;
+	width: 600px;
+	font-size:16px;
+	label {
+		color: #0082a0;
+		float:left;
+		margin: 0 0 5px 0;
+	}
+	input[type="text"], input[type="password"], input[type="email"] {
+		width: 590px;
+		height: 20px;
+		font-size: 18px;
+		padding: 10px 5px;
+		margin: 0 0 30px 0;
+		@include border-radius(2px);
+		border: 1px solid #ccc;
+	}
+	input[type="submit"] {
+	color: #666;
+	font-size: 18px;
+	text-shadow: 0 1px 0 #fff;
+	padding: 10px 20px;
+	background: #999;
+	border: 1px solid #ccc;
+	@include border-radius(3px);
+	@include background-image(linear-gradient(top, white, #dddddd)); 
+	}
+}
