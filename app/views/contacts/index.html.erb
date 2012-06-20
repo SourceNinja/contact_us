@@ -13,9 +13,12 @@
     <td><%= contact.name %></td>
     <td><%= contact.email %></td>
     <td><%= contact.phone %></td>
-    <td><%= link_to 'Show', contact %>
-    <%= link_to 'Edit', edit_contact_path(contact) %>
-    <%= link_to 'Destroy', contact, confirm: 'Are you sure?', method: :delete %></td>
+    <td>
+      <div class="edit" >
+        <%= link_to 'Show', contact %>
+        <%= link_to 'Destroy', contact, confirm: 'Are you sure?', method: :delete %>
+      </div>
+    </td>
   </tr>
 <% end %>
 </table>

@@ -123,9 +123,23 @@ table {
 	width: 900px;
 	font-size: 14px;
 	color: #444;
+	th {
+		padding: 5px;
+	}
 	tr {
+		&:nth-child(2n){
+		background: #f6f6f6;
+	}
 		td {
 			padding: 5px 10px;
+			.edit {
+				float: right;
+				a {
+					font-size: 12px;
+					color: #999;
+					margin-left: 10px;
+				}
+			}
 		}
 	}
 }
