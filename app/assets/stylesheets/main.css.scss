@@ -1,7 +1,34 @@
 html, body {
-	margin: 0;
-	padding: 0;
 	font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size: 62px;
+	color: #00aad2;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 28px;
+	margin-bottom: 30px;
+	color: #888;
+}
+
+h4 {}
+
+h5 {
+	color: #087290;
+	font-size: 28px;
+	font-weight: 500;
+	margin: 0 0 5px 0;
+}
+
+p {
+	color: #999;
+	font-size: 18px;
+	margin: 0 0 10px 0;
 }
 
 nav {
@@ -10,22 +37,41 @@ nav {
 	margin: 0 0 40px 0;
 }
 
-.container {
-	width: 600px;
-	margin: 0 auto;
-}
-
-h2 {
-	font-size: 32px;
-	color: #00aad2;
-	font-weight: 600;
-	margin-bottom: 10px;
-}
-
-h3 {
+form {
+	float: left;
+	/*margin: 20px auto 0 auto;*/
+	width: 500px;
+	font-size:16px;
+	label {
+		color: #0082a0;
+		float:left;
+		margin: 0 0 5px 0;
+	}
+	input[type="text"], input[type="password"], input[type="email"] {
+		width: 490px;
+		height: 20px;
+		font-size: 18px;
+		padding: 10px 5px;
+		margin: 0 0 30px 0;
+		@include border-radius(2px);
+		border: 1px solid #ccc;
+		@include box-shadow(0 1px 5px rgba(0,0,0,0.1) inset);
+	}
+	input[type="submit"] {
+	color: #666;
 	font-size: 18px;
-	margin-bottom: 10px;
-	color: #999;
+	text-shadow: 0 1px 0 #fff;
+	padding: 10px 20px;
+	background: #999;
+	border: 1px solid #ccc;
+	@include border-radius(3px);
+	@include background-image(linear-gradient(top, white, #dddddd)); 
+	}
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
 }
 
 .alert {
@@ -39,32 +85,11 @@ h3 {
 	margin-bottom: 10px;
 }
 
-form {
-	margin: 20px auto 0 auto;
-	width: 600px;
-	font-size:16px;
-	label {
-		color: #0082a0;
-		float:left;
-		margin: 0 0 5px 0;
-	}
-	input[type="text"], input[type="password"], input[type="email"] {
-		width: 590px;
-		height: 20px;
-		font-size: 18px;
-		padding: 10px 5px;
-		margin: 0 0 30px 0;
-		@include border-radius(2px);
-		border: 1px solid #ccc;
-	}
-	input[type="submit"] {
-	color: #666;
-	font-size: 18px;
-	text-shadow: 0 1px 0 #fff;
-	padding: 10px 20px;
-	background: #999;
-	border: 1px solid #ccc;
-	@include border-radius(3px);
-	@include background-image(linear-gradient(top, white, #dddddd)); 
+.values {
+	width: 360px;
+	float: left;
+	padding: 0 40px 0 0;
+	p {
+		margin-bottom: 20px;
 	}
 }

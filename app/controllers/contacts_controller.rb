@@ -45,7 +45,7 @@ class ContactsController < ApplicationController
         format.html { redirect_to contacts_url, notice: 'Contact was successfully created.' }
         format.json { render json: @contact, status: :created, location: @contact }
       elsif success
-        format.html { redirect_to '/thank_you.html' }
+        format.html { render 'thank_you' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "new" }
