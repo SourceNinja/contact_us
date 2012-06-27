@@ -11,7 +11,9 @@
 
 	<nav>
 		<div class="container">
-			<%= image_tag "/logo.png", :id => "logo" %>
+			<%= link_to "http://www.sourceninja.com" do %>
+				<%= image_tag "/logo.png", :id => "logo" %>
+			<% end %>
 			<% if admin_signed_in? %>
 				<ul>
 					<li>
