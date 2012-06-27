@@ -33,24 +33,6 @@ p {
 	margin: 0 0 10px 0;
 }
 
-nav {
-	background: #eee;
-	padding: 10px 0;
-	margin: 0 0 20px 0;
-	ul {
-		float: right;
-		li {
-			float: left;
-			margin-left: 20px;
-			a {
-				text-decoration: none;
-				color: #333;
-				line-height: 31px;
-			}
-		}
-	}
-}
-
 form {
 	float: left;
 	/*margin: 20px auto 0 auto;*/
@@ -103,7 +85,7 @@ form {
 }
 
 .container {
-	width: 900px;
+	width: 905px;
 	margin: 0 auto;
 }
 
