@@ -60,22 +60,13 @@ describe "Contacts pages" do
       response.should have_selector("li", :content => %q{Phone can't be blank})
     end
 
-    it "should reject an invalid phone number" do
-      get new_contact_path
-
-      fill_in :name,  :with => 'Joe Public'
-      fill_in :email, :with => 'joe@joepublic.com'
-      click_button
-
-      response.should have_selector("li", :content => %q{Phone is invalid})
-    end
-
     it "should accept valid parameters" do
       get new_contact_path
 
-      fill_in :name,  :with => 'Joe Public'
-      fill_in :email, :with => 'joe@joepublic.com'
-      fill_in :phone, :with => '(650) 555-3456'
+      fill_in :name,    :with => 'Joe Public'
+      fill_in :company, :with => 'Public Company Number One, Inc.'
+      fill_in :email,   :with => 'joe@joepublic.com'
+      fill_in :phone,   :with => '(650) 555-3456'
       click_button
 
       response.should be_success

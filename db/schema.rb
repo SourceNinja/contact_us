@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120619202401) do
+ActiveRecord::Schema.define(:version => 20120627212141) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20120619202401) do
     t.string   "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "company"
   end
 
 end
